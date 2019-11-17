@@ -29,27 +29,49 @@ As fontes de dados utilizadas na teoria são duas, mas na realidade a primeira �
 Eu estudei as informações que a API trás para o usuário no arquivo .json e cheguei a conclusão de que as informações que eu desejava que fossem armazenadas e disponibilizadas para o usuário fossem:
 
 -> ID: O ID do anime na rede social.
+
 -> URL: A URL de onde foram tiradas as informações.
+
 -> Trailer: O Trailer do anime se este estiver disponível.
+
 -> Título: O Título original do anime.
+
 -> Título em inglês: Se houver, o título em inglês do anime.
+
 -> Exibição: Onde o anime foi exibido (TV, DVD, BluRay, etc.).
+
 -> Fonte: Tipo de obra que o anime se baseou, se for o caso.
+
 -> Episódios: Número de episódios do anime.
+
 -> Status: Situação atual do anime.
+
 -> Datas: Período de início do anime e fim do anime se for o caso.
+
 -> Classificação Indicativa: Idades para qual o anime é recomendado.
+
 -> Sinopse: Descrição da história do anime.
+
 -> Cenário: O que levou à criação do anime, se for o caso.
+
 -> Temporada: Em que temporada de animes (Estações do ano), ocorreu a estréia.
+
 -> Transmissão: Horário de exibição do anime.
+
 -> Adaptação: Nome da obra em que o anime se baseou, sendo este o caso.
+
 -> Continuação: Continuação do anime, se houver.
+
 -> Produtores: Produtores do anime.
+
 -> Licenciadores: Responsáveis pelo licenciamento do anime, se for o caso.
+
 -> Estúdio: Estúdio que animou o anime.
+
 -> Gêneros: Gêneros que o anime possui.
+
 -> Abertura: Aberturas que o anime possui.
+
 -> Encerramento: Encerramentos que o anime possui.
 
 Haviam mais algumas informações disponíveis como notas para o anime naquela rede social, ranking, popularidade e pessoas que assistiram esse anime, que estão presentes na rede social, mas o meu objetivo foi trazer informações mais gerais para as pessoas e não coisas específicas da rede social.
