@@ -4,7 +4,7 @@ Feito por: Max Lucio Martins de Assis
 
 Este projeto tem como objetivo gerar um grafo RDF a partir das informações que constam na base de dados da rede social MyAnimeList, conhecida também como Mal. No grafo constarão informações como título, descrição, episódios, época de exibição, etc. sobre os animes que estão presentes na base de dados.
 
-As fontes de dados utilizadas na teoria são duas, mas na realidade a primeira é um meio para acessar as informações da segunda fonte de dados:
+As fontes de dados utilizadas na teoria são duas, mas na realidade a primeira é um meio para acessar as informações da segunda fonte de dados, há uma terceira fonte para obter a definição de anime também:
 
 ## JikanAPI
 
