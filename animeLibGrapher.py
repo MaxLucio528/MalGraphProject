@@ -1,4 +1,4 @@
-'''
+﻿'''
 Aqui são importadas as seguintes bibliotecas:
 
 1 - requests: Para obter as informações da rede;
@@ -57,7 +57,7 @@ def getAnimeData():
         Este loop obtém todos os dados de animes cadastrados na 
         fonte em que se pega os dados.
         '''
-        for x in range(1, 11):
+        for x in range(1, 40730):
             data = requests.get(source + str(x))
             jsonData = json.loads(data.content)
 
