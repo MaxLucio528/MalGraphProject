@@ -94,6 +94,10 @@ Há três arquivos .py presentes para o usuário:
 
 ## Changelog
 
+**Versão 1.0.1 (19/11/2019)**
+
+-> Alteração no animeQuery.py, tornando a versão 1.1 com a melhoria da experiência de consulta para o usuário; pequena alteração em uma string no animeLibGrapher.py 
+
 **Versão 1.0 (17/11/2019)**
 
 -> Criação do programa, sendo ele capaz de gerar o grafo com todas as informações, além de programas auxiliares para consulta e verificação de triplas.
