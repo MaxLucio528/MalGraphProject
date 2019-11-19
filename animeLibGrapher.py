@@ -211,6 +211,7 @@ def getAnimeData():
 
                 # Salvando dados em uma lista
                 animesData.append(animeData)
+                print("Anime", x, "obtained.")
 
         return animesData
     except Exception as e:
@@ -322,7 +323,7 @@ para o usuário.
 '''
 def main():
     print("----------------------------------------------")
-    print("          Anime Graph Generator v1.0         ")
+    print("          Anime Graph Generator v1.0          ")
     print("----------------------------------------------\n")
     try:
         # Chamando funções de obtenção de dados
