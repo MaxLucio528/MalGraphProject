@@ -42,7 +42,7 @@ After studying the data the API brings to the user in the JSON file, the conclus
 
 -> Source: Where the anime was based, it it's the case.
 
--> Episódios: Number of episodes the anime has.
+-> Episodes: Number of episodes the anime has.
 
 -> Status: Current situation of the anime.
 
@@ -117,6 +117,8 @@ python tripleVerifier.py
 ## Changelog
 
 **Version 2.0 (15/12/2019) [FORMAT (DD/MM/YY)]**
+
+-> The program is in english as well as the comments.
 
 -> Complete revamp of the program, removal of the following datas: background, coverage and season of broadcast.
 
