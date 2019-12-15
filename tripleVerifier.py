@@ -1,10 +1,17 @@
-# Obtendo a biblioteca rdflib e importando especificamento o Graph
+# Getting the library rdflib to parse the graph and import the clear screen function.
 from rdflib import Graph
+from generalFunctions.clearScreen import clear
 
-# Criando o grafo e importando o arquivo turtle para leitura
+# Parsing the graph.
 g = Graph()
-filename = 'AnimeData.ttl'
-g.parse(filename, format='turtle')
+filename = "AnimeData.xml"
+g.parse(filename)
 
-# Lendo o grafo e informando a quantidade de triplas que constam nele
-print(filename, 'tem', len(g), 'triplas')
+clear()
+
+# Reading the graph and informing how many triples it has.
+print("\n" + filename, "has", len(g), "triples\n")
+
+input("Press ENTER to continue...")
+
+clear()

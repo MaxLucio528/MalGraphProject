@@ -1,103 +1,147 @@
 # MalGraphProject
 
-Feito por: Max Lucio Martins de Assis
+Made by: Max Lucio Martins de Assis
 
-Este projeto tem como objetivo gerar um grafo RDF a partir das informações que constam na base de dados da rede social MyAnimeList, conhecida também como Mal. No grafo constarão informações como título, descrição, episódios, época de exibição, etc. sobre os animes que estão presentes na base de dados.
+This project has the goal of generate a RDF graph from data that appear in the database of the social media MyAnimeList, also known as MAL. In the graph will appear data like title, description, episodes, exhibition date, etc. about the animes in the database.
 
-As fontes de dados utilizadas na teoria são duas, mas na realidade a primeira é um meio para acessar as informações da segunda fonte de dados, há uma terceira fonte para obter a definição de anime também:
+The source of data used in theory are two, but in reality the first is a way to access the data in of the second source of data. There's a third source of data to get the definition to some things inside the graph as well:
 
 ## JikanAPI
 
 -> Link: https://jikan.moe/
 
--> Esta é uma API não-oficial da rede social MyAnimeList, que disponibiliza informações diversas contidas na rede social em formato .json para o usuário, o programa puxa todos os dados a partir da API.
+-> This is a non-official API of the social media MyAnimeList, that has diverse data of the social media available in JSON format to the user, the program pulls all the data from this API.
 
 ## MyAnimeList
 
 -> Link: https://myanimelist.net/
 
--> A rede social em si que possui mais de 14000 animes registrados, esta é a base de dados de onde a API pega as informações, ou seja, indiretamente o programa pega as informações deste site também.
+-> The social media in question tha has 14000+ of animes registered, this is the database from where the API gets the data, meaning that, indirectly the program gets the data from this site as well.
 
 ## DBPedia
 
 -> Link: http://dbpedia.org/
 
--> Base de dados de inúmeras coisas, usei o DBPedia para obter a definição geral de anime, que está no centro de tudo no grafo e todos os outros animes são ligados a tal tripla com estas informações.
+-> DBPedia has Linked Open Data and has a immensurable amount of information, but on this program it's used to get the definition of some ontologies and other resources.
 
-## Processo de erredeificação
+## Process to make the RDF
 
-Eu estudei as informações que a API trás para o usuário no arquivo .json e cheguei a conclusão de que as informações que eu desejava que fossem armazenadas e disponibilizadas para o usuário fossem:
+After studying the data the API brings to the user in the JSON file, the conclusion that was made is that it would be best to keep only the general information, so someone that doesn't watch anime can understand the information as well, the data obtained are:
 
--> ID: O ID do anime na rede social.
+-> ID: The anime ID, only to create all the URIRefs.
 
--> URL: A URL de onde foram tiradas as informações.
+-> URL: From where all the data are pulled.
 
--> Trailer: O Trailer do anime se este estiver disponível.
+-> Trailer: A trailer for the anime if it's available.
 
--> Título: O Título original do anime.
+-> Title: The original anime title.
 
--> Título em inglês: Se houver, o título em inglês do anime.
+-> English Title: If available, the english title is obtained as well.
 
--> Exibição: Onde o anime foi exibido (TV, DVD, BluRay, etc.).
+-> Exhibition: Where the anime was broadcasted (TV, DVD, BluRay, etc.).
 
--> Fonte: Tipo de obra que o anime se baseou, se for o caso.
+-> Source: Where the anime was based, it it's the case.
 
--> Episódios: Número de episódios do anime.
+-> Episódios: Number of episodes the anime has.
 
--> Status: Situação atual do anime.
+-> Status: Current situation of the anime.
 
--> Datas: Período de início do anime e fim do anime se for o caso.
+-> Start Date: When the anime started.
 
--> Classificação Indicativa: Idades para qual o anime é recomendado.
+-> End Data: When the anime ended.
 
--> Sinopse: Descrição da história do anime.
+-> Rating: The recommended age to watch it.
 
--> Cenário: O que levou à criação do anime, se for o caso.
+-> Description: A brief synopsis of the anime.
 
--> Temporada: Em que temporada de animes (Estações do ano), ocorreu a estréia.
+-> Broadcast: Time of the anime broadcast.
 
--> Transmissão: Horário de exibição do anime.
+-> Adaptation: Name of the work the anime is based on, it it's the case.
 
--> Adaptação: Nome da obra em que o anime se baseou, sendo este o caso.
+-> Prequel: Previous history of the anime, if it's the case.
 
--> Continuação: Continuação do anime, se houver.
+-> Sequel: Next history of the anime, if it's the case.
 
--> Produtores: Produtores do anime.
+-> Spin-off: Alternative history of the anime, if it's the case.
 
--> Licenciadores: Responsáveis pelo licenciamento do anime, se for o caso.
+-> Producers: The anime producers.
 
--> Estúdio: Estúdio que animou o anime.
+-> Licensors: Responsible for the anime licensing, if it's the case.
 
--> Gêneros: Gêneros que o anime possui.
+-> Studio: Who animated the anime.
 
--> Abertura: Aberturas que o anime possui.
+-> Genres: The anime genres.
 
--> Encerramento: Encerramentos que o anime possui.
+-> Openings: The anime openings.
 
-Haviam mais algumas informações disponíveis como notas para o anime naquela rede social, ranking, popularidade e pessoas que assistiram esse anime, que estão presentes na rede social, mas o meu objetivo foi trazer informações mais gerais para as pessoas e não coisas específicas da rede social.
+-> Endings: The anime endings.
 
-Fora isso há uma tripla específica que é sobre a definição de anime, em que todos os animes são ligados também, tendo o título, descrição sobre o que é anime e a URL também.
+There were some other data available like score to the anime in the social media, ranking, popularity and who watched an certain anime, but like it was said before, only general information are available to the public in this program so it can be more accessible.
 
-Os vocabulários usados são o RDF, para definir o RDF.type de cada um dos animes e da definição geral, FOAF apenas para as URLs e para o tipo da definição geral, que é do tipo FOAF.Project. Além disso o outro vocabulários usado é o Dublin Core, que é usado para títulos, descrições, gêneros, fontes, tempo de exibição, data de estréia, produtores, licenciadores, estúdios e assunto.
+From the standard vocabularies, it was used the RDF to use the RDF:type only, DC (Dublin Core) for descriptions, titles and other things and OWL to indicate equality between triples.
 
-Por fim dois vocabulários locais, sendo eles o mal e o dbpedia, onde mal guarda o restante das informações sobre os animes e o dbpedia é para que o assunto (Salvo como DC.subject) de cada um dos animes sejam referenciados à página sobre animes no DBPedia.
+The local vocabularies are "mal", with was used to define what were openings, endings, adaptations, etc., "schema" to define things like dates and rating, "dbo" to use some ontologies like tvShow, "dbr" to get some definitions in situations where there wasn't a ontology, and "mo" to define the openings and endings.
 
-## Outras informações
+## Things to Know
 
-Há três arquivos .py presentes para o usuário: 
+There is three python files that the user should execute:
 
--> animeLibGrapher.py: O responsável pela criação do grafo, onde o próprio usuário define os animes que quer salvar no grafo a partir de seus IDs ao editar o código, no fim é gerado um arquivo .ttl onde todas as informações são salvas.
+-> animeGrapher.py: Can create a graph with a anime and append a existing graph with new animes, the user has the option to add only one anime or set a range so the program can get all the animes in that defined range, in after the process is finished, a XML file is generated, this is where all the data is saved.
 
--> animeQuery.py: Que permite que o usuário digite o nome de um anime e então o programa efetua uma consulta SPARQL dentro do arquivo .ttl gerado pelo arquivo .py anterior a este.
+-> graphQuery.py: Can make six different types of query as long as the user gives the anime name to the program, this program can get the general information about an anime, it's related works, it's dates, it's producers, licensors and studios, it's tracks and it's genres. It's up to the user choose one of those.
 
--> tripleVerifier.py: O próprio nome diz o que ele faz, ele simplesmente tem a função de verificar quantas triplas o grafo no arquivo .ttl possui.
+-> tripleVerifier.py: Verifies the number of triples the XML file has.
+
+-> AnimeData.xml: Has only 1 anime (My Hero Academia) to be used as example in the programs.
+
+## Execution
+
+-> To generate a graph, type the following:
+
+~~~
+python animeGrapher.py
+~~~
+
+-> To query in an existing graph, type the following:
+
+~~~
+python graphQuery.py
+~~~
+
+-> To check the number of triples in an existing graph, type the following:
+
+~~~
+python tripleVerifier.py
+~~~
 
 ## Changelog
 
-**Versão 1.0.1 (19/11/2019)**
+**Version 2.0 (15/12/2019) [FORMAT (DD/MM/YY)]**
 
--> Alteração no animeQuery.py, tornando a versão 1.1 com a melhoria da experiência de consulta para o usuário; pequena alteração em uma string no animeLibGrapher.py 
+-> Complete revamp of the program, removal of the following datas: background, coverage and season of broadcast.
 
-**Versão 1.0 (17/11/2019)**
+-> Coverage splited in start date and end date.
 
--> Criação do programa, sendo ele capaz de gerar o grafo com todas as informações, além de programas auxiliares para consulta e verificação de triplas.
+-> Genres, Producers, Licensors and Studios aren't links in the graph anymore, only having it's names now.
+
+-> Sequels now aren't links, being the URI to the anime in the graph if it is already there.
+
+-> Prequels and Spin-Offs added.
+
+-> Vocabularies changed for some things, ontologies attributed to things like source, producers, studios, etc.
+
+-> Openings and Endings are separe from the animes now, having it's own vocabulary now.
+
+-> Different query options to the user.
+
+-> Option to add one anime or bulk add by a user-determined range.
+
+-> And much more.
+
+**Version 1.1 (19/11/2019) [FORMAT (DD/MM/YY)]**
+
+-> Changes in animeQuery.py, making the version 1.1 provide a better query experience to the user; little change in a string in animeLibGrapher.py
+
+**Version 1.0 (17/11/2019) [FORMAT (DD/MM/YY)]**
+
+-> Program creation, it's already capable of generating a graph with all the data in turtle format, as well as auxiliary programs to make queries and a triple verifier. Made in brazilian portuguese.

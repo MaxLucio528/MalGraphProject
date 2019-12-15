@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dbo="http://dbpedia.org/ontology/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:mal="https://myanimelist.net/#"
+   xmlns:mo="http://purl.org/ontology/mo/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:schema="http://schema.org/"
+>
+  <rdf:Description rdf:about="https://myanimelist.net/#a31964">
+    <owl:sameAs>https://myanimelist.net/anime/31964/Boku_no_Hero_Academia</owl:sameAs>
+    <schema:trailer>https://www.youtube.com/embed/D5fYOnwYkj4?enablejsapi=1&amp;wmode=opaque&amp;autoplay=1</schema:trailer>
+    <dc:source rdf:resource="http://dbpedia.org/ontology/Manga"/>
+    <dbo:producer>TOHO animation</dbo:producer>
+    <dc:title>My Hero Academia</dc:title>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Anime"/>
+    <mal:ending rdf:resource="https://myanimelist.net/#ed1-31964"/>
+    <schema:productionCompany>Bones</schema:productionCompany>
+    <dbo:producer>Dentsu</dbo:producer>
+    <schema:startDate>2016-04-03</schema:startDate>
+    <dbo:genre>Shounen</dbo:genre>
+    <dc:description>The appearance of "quirks," newly discovered super powers, has been steadily increasing over the years, with 80 percent of humanity possessing various abilities from manipulation of elements to shapeshifting. This leaves the remainder of the world completely powerless, and Izuku Midoriya is one such individual. Since he was a child, the ambitious middle schooler has wanted nothing more than to be a hero. Izuku's unfair fate leaves him admiring heroes and taking notes on them whenever he can. But it seems that his persistence has borne some fruit: Izuku meets the number one hero and his personal idol, All Might. All Might's quirk is a unique ability that can be inherited, and he has chosen Izuku to be his successor! Enduring many months of grueling training, Izuku enrolls in UA High, a prestigious high school famous for its excellent hero training program, and this year's freshmen look especially promising. With his bizarre but talented classmates and the looming threat of a villainous organization, Izuku will soon learn what it really means to be a hero. [Written by MAL Rewrite]</dc:description>
+    <mal:opening rdf:resource="https://myanimelist.net/#op1-31964"/>
+    <schema:numberOfEpisodes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</schema:numberOfEpisodes>
+    <mal:sequel rdf:resource="https://myanimelist.net/#a33486"/>
+    <mal:adaptation>https://myanimelist.net/manga/75989/Boku_no_Hero_Academia</mal:adaptation>
+    <dc:title>Boku no Hero Academia</dc:title>
+    <dc:format rdf:resource="http://dbpedia.org/ontology/tvShow"/>
+    <dbo:producer>Movic</dbo:producer>
+    <schema:contentRating>PG-13 - Teens 13 or older</schema:contentRating>
+    <schema:copyrightHolder>Funimation</schema:copyrightHolder>
+    <dbo:genre>School</dbo:genre>
+    <dbo:genre>Action</dbo:genre>
+    <schema:endDate>2016-06-26</schema:endDate>
+    <schema:startTime>Sundays at 17:00 (JST)</schema:startTime>
+    <dbo:producer>Shueisha</dbo:producer>
+    <dbo:genre>Comedy</dbo:genre>
+    <dbo:producer>Mainichi Broadcasting System</dbo:producer>
+    <dbo:genre>Super Power</dbo:genre>
+    <mal:spinOff rdf:resource="https://myanimelist.net/#a33929"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://myanimelist.net/#ed1-31964">
+    <mo:Track>HEROES</mo:Track>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/MusicalWork"/>
+    <mo:MusicArtist>Brian the Sun</mo:MusicArtist>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://myanimelist.net/#op1-31964">
+    <mo:Track>The Day</mo:Track>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/MusicalWork"/>
+    <mo:MusicArtist>Porno Graffitti</mo:MusicArtist>
+  </rdf:Description>
+</rdf:RDF>
